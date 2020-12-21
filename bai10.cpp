@@ -7,7 +7,7 @@ void input(int &N){
     cin >> N;
     if (N < 0){
         system("cls");
-        cout << "\t\tNhap lai !!!";
+        cout << "\t\tNhap lai !!!\n";
         input(N);
     }
 }

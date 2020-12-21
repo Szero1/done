@@ -7,9 +7,9 @@ void input(int &x,int &y,int &a){
     cin >> x;
     cout << "\tNhap chi so dien ke thang truoc: ";
     cin >> y;
-    if ((x < 0) && (y < 0)){
+    if ((x < 0) || (y < 0)){
         system("cls");
-        cout << "\t\tNhap lai!!!1";
+        cout << "\t\tNhap lai!!!\n";
         input(x,y,a);
     }
     a = abs(x - y);

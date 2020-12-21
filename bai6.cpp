@@ -16,12 +16,12 @@ void input(sys &ss){
     cout << "\tNhap gia nhung khoi nuoc tu 1 -> 99: ";
     cin >> ss.x;
     cout << "\tNhap gia nhung khoi nuoc tu 100 -> 200: ";
-    cin >> ss\t.y;
+    cin >> ss.y;
     cout << "\tNhap gia nhung khoi nuoc tu >200: ";
     cin >> ss.z;
     if ((ss.x < 0) || (ss.y < 0) || (ss.z < 0) || (ss.n < 0) || (ss.h < 0) || (ss.k< 0)){
         system("cls");
-        cout << "\t\tNhap lai!!!";
+        cout << "\t\tNhap lai!!!\n";
         input(ss);
     }
     ss.a = ss.n * ss.h * ss.k;
