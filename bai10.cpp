@@ -17,8 +17,8 @@ void solve(int N){
     cout << setprecision(0);
     if (N <= 100 ) cout << "\tSo tien phai tra: " << (N * 550)*1.1 <<  " dong";
     else if (N <= 150) cout << "\tSo tien phai tra: " << (100*550 + (N-100)*1100) * 1.1<<  " dong";
-    else if( N <= 200 ) cout << "\tSo tien phai tra: " << (100*550 + 50+1100 + (N - 150)*1470)*1.1<<  " dong";
-    else cout << "\tSo tien phai tra: " << (100*550 + 50+1100 + 50*1470 + (N - 200)*1600)*1.1<<  " dong";
+    else if( N <= 200 ) cout << "\tSo tien phai tra: " << (100*550 + 50*1100 + (N - 150)*1470)*1.1<<  " dong";
+    else cout << "\tSo tien phai tra: " << (100*550 + 50*1100 + 50*1470 + (N - 200)*1600)*1.1<<  " dong";
 }
 
 int main(){
