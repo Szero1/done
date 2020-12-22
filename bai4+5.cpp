@@ -17,7 +17,7 @@ struct dt{
 class tamgiac{
         Diem A,B,C;
         dt d1,d2;
-        float a,b,c,p,x,y,R;
+        float a,b,c,p,x,y,R,S;
     public:
         tamgiac()
         {
@@ -49,34 +49,14 @@ class tamgiac{
                 tamgiac();
             }
             p = (a+b+c) / 2;
-        }
-
-        void Trongtam(){
-            d1.a = 2*(B.x - A.x);
-            d1.b = 2*(B.y - A.y);
-            d1.c = B.x * B.x + B.y*B.y - A.x*A.x - A.y*A.y;
-
-            d2.a = 2*(C.x - A.x);
-            d2.b = 2*(C.y - A.y);
-            d2.c = C.x * C.x + C.y*C.y - A.x*A.x - A.y*A.y;
-
-            float D,Dx,Dy;
-
-            D = d1.a * d2.b - d2.a * d1.b;
-            Dx = d1.c * d2.b - d2.c * d1.b;
-            Dy = d1.a * d2.c - d2.a * d1.c;
-            x =Dx/D;
-            y = Dy/D;
-            cout << "\n\tTrong tam tam giac la: I = (" << x << ";" << y << ").";
-            R = dodai(A.x - x,A.y - y);
-            cout << "\n\tDo dai ban kinh duong tron ngoai tiep tam giac la: R = " << fixed << setprecision(3) <<R;
+            S = sqrt(p*(p-a)*(p-b)*(p-c));
+            R = (a*b*c)/(4*S);
         }
 
         void Show(){
             cout << "\tchu vi tam giac la " << p*2;
-            float S = sqrt(p*(p-a)*(p-b)*(p-c));
             cout << "\n\tDien tich tam giac la: " << S;
-            Trongtam();
+            cout << "\n\tBan kinh duong tron ngoai tiep tam giac la: R = "<< fixed << setprecision(3) <<R;
         }
 };
 
