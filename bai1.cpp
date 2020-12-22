@@ -10,32 +10,24 @@ struct Diem{
     float x,y;
 };
 
-void inputht(ht &C){
+void input(ht &C,Diem &A){
     cout << "\tNhap Duong tron tam I(x;y) va Ban kinh R";
     cout << "\n\tR = ";
     cin >> C.R;
     if (C.R <= 0){
         system("cls");
         cout << "\tNhap lai !!! \n";
-        inputht(C);
+        input(C,A);
     }
     cout << "\tx = ";
     cin >> C.x;
     cout <<"\ty = ";
     cin >> C.y;
-}
-
-void inputDiem(Diem &A){
     cout << "\tNhap toa do diem A(x;y).";
     cout << "\n\tx = ";
     cin >> A.x;
     cout << "\ty = ";
     cin >> A.y;
-}
-
-void input(ht &C, Diem &A){
-    inputht(C);
-    inputDiem(A);
 }
 
 void solve(ht C, Diem A){
@@ -52,8 +44,7 @@ int main(){
 
     input(C,A);
     solve(C,A);
-
-
+    
     cout << endl << "\t";
     system("pause");
     return 0;
