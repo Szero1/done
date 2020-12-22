@@ -17,7 +17,7 @@ struct dt{
 class tamgiac{
         Diem A,B,C;
         dt d1,d2;
-        float a,b,c,p,x,y,R,S;
+        float a,b,c,p,R,S;
     public:
         tamgiac()
         {
