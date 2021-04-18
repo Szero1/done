@@ -22,6 +22,6 @@ int main(){
             break;
         }
     while(!is_SuperPrime(m))++m;
-    cout << endl << m+1;
+    cout << endl << m;
     return 0;
 }
