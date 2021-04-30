@@ -18,6 +18,6 @@ int main(){
     else{for (int i = 0; i< count -1;++i) cout << pt[i] << "*";
     cout << pt[count-1];}
     cout << "\nSo uoc: " << count;
-    cout << "\nTong cac uoc: S = " << S;
+    cout << "\nTong cac uoc: S = " << S+1;
     return 0;
 }
