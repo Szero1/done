@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    cin.clear();
+    cin >> s;
+    int count = 0,temp = 0;
+    for (auto &item:s)
+        if (item =='e') ++count;
+        else {
+            temp = max(temp,count);
+            count = 0;
+        }
+    cout << temp << "\n";
+    for (;temp>0;--temp) cout << 'e';
+    return 0;
+}
