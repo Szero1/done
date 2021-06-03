@@ -5,7 +5,7 @@ int main(){
     cin >> N;
     if (N < 3 || N >35) return 0;
     vector<int> B(N+2),D;
-    B[0] = B[N+1] = -INFINITY;
+    B[0] = B[N+1] = -2147483648;
     for (int i = 1;i<=N;++i) cin >> B[i];
     for (int i = 1; i <= N;++i) if (B[i] > B[i-1] && B[i] > B[i+1]) cout  << B[i] << " "; 
     return 0;
