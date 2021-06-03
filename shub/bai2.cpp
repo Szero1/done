@@ -23,7 +23,7 @@ int main(){
     int n;
     cin >> n;
     for (auto item:a) add_number(n,item);
-    for (auto &item:snt) cout << item << " ";
-    cout << endl << "Co tat ca " << snt.size() << " so sieu nguyen to co "<< n<< " chu so";    
+    cout << snt.size() << "\n";
+    for (auto &item:snt) cout << item << " "; 
     return 0;
 }
