@@ -14,17 +14,23 @@ int main(){
     cin >> n;
     vector<pair<int,int>> pt;
     cout << n << " = 1";
-    for (int i = 2;i<= n;++i){
-        if (is_prime(i) & n % i == 0){
-            pair<int,int> u = make_pair(0,i);
-            for (;n % i == 0; n/=i) u.first++;
-            pt.push_back(u);
-            uoc *= (u.first + 1);
-            s *= ((pow(i,u.first + 1)-1)/(i-1));
+    if (is_prime(n)){
+        cout << "*" << n;
+        cout << "\nSo uoc: 2";
+        cout << "\nTong cac uoc:" << n +1;
+    }else{
+        for (int i = 2;i<= n;++i){
+            if (is_prime(i) & n % i == 0){
+                pair<int,int> u = make_pair(0,i);
+                for (;n % i == 0; n/=i) u.first++;
+                pt.push_back(u);
+                uoc *= (u.first + 1);
+                s *= ((pow(i,u.first + 1)-1)/(i-1));
+            }
         }
+        for (auto item:pt) for (;item.first>0;--item.first) cout << "*" << item.second; 
+        cout << "\nSo uoc: " << uoc;
+        cout << "\nTong cac uoc: " << s;
     }
-    for (auto item:pt) for (;item.first>0;--item.first) cout << "*" << item.second; 
-    cout << "\nSo uoc: " << uoc;
-    cout << "\nTong cac uoc: " << s;
     return 0;
 }
