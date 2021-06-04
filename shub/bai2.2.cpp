@@ -2,22 +2,18 @@
 using namespace std;
 
 int main(){
-    int n,S = 0,count = 0;
+    int n,count = 0,S = 0;
     cin >> n;
-    cout << n << " = ";
-    vector<int> pt;
-    for (int i = 2;i<=n;++i){
-        while(n % i == 0){
+    cout << n << " = 1";
+    for (int i = 1;i<=n;++i){
+        if (n % i == 0){
+            count++;
             S += i;
-            count += 1;
-            n /= i;
-            pt.push_back(i);
         }
     }
-    if (count == 0) cout << n;
-    else{for (int i = 0; i< count -1;++i) cout << pt[i] << "*";
-    cout << pt[count-1];}
-    cout << "\nSo uoc: " << count;
-    cout << "\nTong cac uoc: S = " << S+1;
+    for (int i = 2;n != 1;++i)
+        for (;n%i==0;n/=i) cout << "*" << i;
+    cout << "\n" << count;
+    cout << "\n" << S;
     return 0;
 }
