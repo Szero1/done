@@ -20,7 +20,7 @@ int main(){
         cout << "\nTong cac uoc:" << n +1;
     }else{
         for (int i = 2;i<= n;++i){
-            if (is_prime(i) & n % i == 0){
+            if (is_prime(i) && n % i == 0){
                 pair<int,int> u = make_pair(0,i);
                 for (;n % i == 0; n/=i) u.first++;
                 pt.push_back(u);
