@@ -14,8 +14,7 @@ int MakeFi(const int &n){
 
 int main(){
     int M,temp = 0;
-    //cin >> M;
-    M = 1999999999;
+    cin >> M;
     vector<bool> SNT(47,true);
     SNT[0] = SNT[1] = SNT[2] = false;
     for (int i = 3;i*i<=46;++i) if (SNT[i]) for (int j = i*i;j <= 46;j+= i) SNT[j] = false;
