@@ -11,7 +11,7 @@ int main(){
     for (int i = 1;i < N;++i)
         if (A[i] < A[i-1]){
             ++count;
-            k.insert(pair<int,float>(i,A[i]));
+            k.insert(pair<int,float>(i+1,A[i]));
         }
     cout << count << "\n";
     if (count > 0) for (auto &item:k) cout << item.first << " " << item.second << "\n";
