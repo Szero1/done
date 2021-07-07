@@ -3,13 +3,16 @@ using namespace std;
 
 int main()
 {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    
     int n;
     cin >> n;
-    vector<int> A(n+1);
-    A[0] = 0;
+    vector<int> A;
+    A.push_back(0);
     for (int x,i = 1;i<=n;++i){
         cin >> x;
-        A[i] = A[i-1] + x;
+        A.push_back(A[i-1] + x);
     }
     for (int i = 0;i<n;++i) cout << A[i] << " ";
     return 0;
