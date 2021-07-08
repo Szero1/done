@@ -18,6 +18,7 @@ int main()
         if (A[i] == 'X') while (A[i] == 'X') ++i;
         if (A[i] == 'V'){
             while (A[c] == 'V') --c;
+            if (i >= c) break;
             char temp = A[c];
             A[c] = A[i];
             A[i] = temp;
