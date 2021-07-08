@@ -36,6 +36,7 @@ int main()
             for (char &item:A) cout << item << " ";
         }
     }
+    if (t == 0) for (char &item:A) cout << item << " ";
     cout << "\n" << t;
     return 0;
 }
