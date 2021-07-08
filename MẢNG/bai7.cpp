@@ -14,7 +14,7 @@ int main()
         A.push_back(x);
     }
     int t = 0;
-    for (int i = 0,c = n-1;i<=c;++i){
+    for (int i = 0,c = n-1;i<=c;++i,c = n - 1){
         if (A[i] == 'X') while (A[i] == 'X') ++i;
         if (A[i] == 'V'){
             while (A[c] == 'V') --c;
