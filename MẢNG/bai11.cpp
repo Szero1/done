@@ -3,10 +3,7 @@ using namespace std;
 vector<int> A;
 
 bool check(int l, int r){
-    int mid = (l+r)/2;
-    for(;l<=mid;++l,--r){
-        if (A[l] != A[r]) return false;
-    }
+    while (l <= r) if (A[l++] != A[r--]) return false;
     return true;
 }
 
